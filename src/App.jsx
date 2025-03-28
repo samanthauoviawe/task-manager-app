@@ -6,7 +6,7 @@ function App() {
     return saved ? JSON.parse(saved) : [];
   });
   const [filter, setFilter] = useState('all');
-  const [currentView, setCurrentView] = useState('tasks'); // Default view is tasks
+  const [currentView, setCurrentView] = useState('tasks'); 
   const [taskForm, setTaskForm] = useState({
     name: '',
     description: '',
@@ -37,7 +37,7 @@ function App() {
     e.preventDefault();
     if (!taskForm.name.trim()) return;
     addTask(taskForm);
-    setTaskForm({ name: '', description: '', priority: 'medium' }); // Reset form
+    setTaskForm({ name: '', description: '', priority: 'medium' }); 
   };
 
   const editTask = (id, newText, type) => {
@@ -48,7 +48,7 @@ function App() {
 
   const deleteTask = (id) => {
     setTasks(tasks.filter(task => task.id !== id));
-    setShowDeleteConfirmation(false); // Close the confirmation dialog
+    setShowDeleteConfirmation(false); 
   };
 
   const confirmDelete = (id) => {
