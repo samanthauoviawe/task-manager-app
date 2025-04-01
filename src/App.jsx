@@ -14,10 +14,15 @@ function App() {
   });
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
   const [taskToDelete, setTaskToDelete] = useState(null);
+  const [sidebarVisible, setSidebarVisible] = useState(false); // State for sidebar visibility
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }, [tasks]);
+
+  const toggleSidebar = () => {
+    setSidebarVisible(prevState => !prevState); // Toggle sidebar visibility
+  };
 
   const addTask = (task) => {
     const newTask = {
@@ -225,8 +230,12 @@ function App() {
 
   return (
     <div className="dashboard">
+      {/* Hamburger Menu */}
+      <div className="hamburger-icon" onClick={toggleSidebar}>
+        ☰
+      </div>
       {/* Sidebar */}
-      <div className="sidebar">
+      <div className={`sidebar ${!sidebarVisible ? 'show' : ''}`}>
         <h2 className="logo">Task Manager</h2>
         <ul>
           <li onClick={() => setCurrentView('dashboard')}>Dashboard</li>
@@ -237,7 +246,9 @@ function App() {
       {/* Main Content */}
       <div className="main-content">{renderView()}</div>
     </div>
+
   );
+  
 }
 
 export default App;
