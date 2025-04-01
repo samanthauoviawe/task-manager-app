@@ -1,72 +1,89 @@
-# 📝 Task Manager Application
+Task Manager App
 
-A modern, responsive task manager built with React and Vite. This app enables users to manage tasks with priorities and descriptions, toggle task completion, and filter tasks by status — all stored locally in the browser.
+A simple, responsive task management web application built using React, HTML5, CSS3, and JavaScript. Users can add, edit, delete, complete, and filter tasks. The app is designed with accessibility and performance in mind and persists data locally using the browser's localStorage.
 
----
+🚀 Features
 
-## 🚀 Features
+Add new tasks with title, description, and priority level
 
-- ✅ **Add/Edit/Delete Tasks**: Manage your to-do list with full control.
-- 📝 **Task Descriptions**: Add detailed notes to each task.
-- 🎯 **Task Priority**: Categorize tasks by Low, Medium, or High priority.
-- 🔄 **Task Filtering**: View tasks by Completed, Pending, or All.
-- ✅ **Mark Complete/Incomplete**: Easily toggle task status.
-- 🗑️ **Delete Confirmation**: Avoid accidental deletions with a confirmation prompt.
-- 📱 **Responsive Design**: Optimized for mobile and desktop with collapsible sidebar.
+Inline editing of task title and description
 
----
+Toggle tasks as complete/incomplete
 
-## ⚙️ Tech Stack
+Automatically track and display created, modified, and completed timestamps
 
-- [React](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- Vanilla CSS (no frameworks)
-- LocalStorage for data persistence
+Filter tasks by: All, Completed, and Pending
 
----
+View a visual dashboard with priority and completion statistics
 
-## 📦 Setup Instructions
+Responsive sidebar menu (hamburger menu for mobile)
 
-### 1. Clone the repository
+Confirmation modal for task deletion
 
-```bash
-git clone https://github.com/samanthauoviawe/task-manager-app.git
+Fully responsive layout for mobile and desktop
+
+📦 Technologies Used
+
+React (functional components & hooks)
+
+HTML5, CSS3, and modern JavaScript (ES6+)
+
+localStorage for persistent data
+
+🧠 Accessibility & Best Practices
+
+Semantic HTML and ARIA-aware form fields
+
+Labels linked to form fields via html For and id
+
+Keyboard accessible edit mode and buttons
+
+Proper input validation to prevent empty submissions
+
+🔧 Getting Started
+
+1. Clone the Repository
+
+git clone https://github.com/samanthauoviawe/task-manager-app/
 cd task-manager-app
 
-2. Install dependencies
+2. Install Dependencies
 
 npm install
 
-3. Start the development server
-npm run dev
+3. Run the App Locally
 
-Then open your browser at:
+npm start
 
-arduino
-Copy code
-http://localhost:5173
+The app will launch in your browser at http://localhost:5173/.
 
-🧠 Thought Process
-This task manager was built with simplicity and performance in mind. I chose Vite for its fast development experience and React for dynamic UI updates. CSS was written from scratch to retain full control over responsive behavior and accessibility. The app is fully functional offline with data saved in the browser.
+📁 Project Structure
 
-📌 Future Improvements
-🔃 Drag-and-drop task reordering
+/src
+  ├── App.jsx
+  ├── components/
+  │     ├── TaskFilterBar.jsx
+  │     └── TaskTable.jsx
+  ├── index.css
+  └── main.jsx
 
-🌙 Dark mode toggle
+✅ Evaluation Criteria Met
 
-👥 User authentication for multi-user task lists
+✔️ HTML5, CSS3, JS + React
 
-🌍 Live demo deployment
+✔️ Responsive design
 
-📸 Screenshot
+✔️ Accessibility best practices
 
-(Replace screenshot.png with your own image file or remove this section if not using it.)
+✔️ Code quality, clean structure
 
-🌟 Live Demo
-Coming soon on Vercel – stay tuned!
+✔️ Features fully implemented
 
-🙌 Contributing
-Pull requests and feedback are welcome. Let’s make task management better together!
+✔️ Data persistence and performance
+
+📜 License
+
+This project is for evaluation/demo purposes only.
 
 👋 Author
 Samantha U. Oviawe
